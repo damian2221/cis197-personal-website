@@ -15,8 +15,8 @@ const DisplayPostCard = ({
         { title }
       </h5>
       <p className="card-text">{ description }</p>
+      <button type="button" className="btn btn-warning" onClick={() => setIsEditing(true)}>Edit Post</button>
     </div>
-    <button type="button" className="btn btn-warning" onClick={() => setIsEditing(true)}>Edit Post</button>
   </div>
 )
 

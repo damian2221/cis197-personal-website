@@ -1,9 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 0 100px;
+`
 
 const Introduction = ({ introduction }) => (
-  <div>
+  <Wrapper>
     <div className="row">
       <div className="col-8">
         {
@@ -14,7 +19,7 @@ const Introduction = ({ introduction }) => (
         <h3>{ introduction.description }</h3>
       </div>
     </div>
-  </div>
+  </Wrapper>
 )
 
 Introduction.propTypes = {

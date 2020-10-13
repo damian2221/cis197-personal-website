@@ -7,19 +7,14 @@ const PostsList = ({ posts }) => (
   <div className="row">
     { posts.map(post => (
       <div key={post.id} className="col-4">
-        <Post {...post} />
+        <Post title={post.title} image={post.image} description={post.description} id={post.id} />
       </div>
     )) }
   </div>
 )
 
 PostsList.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.exact({
-    title: PropTypes.string,
-    image: PropTypes.string,
-    description: PropTypes.string,
-    id: PropTypes.number,
-  })).isRequired,
+  posts: PropTypes.instanceOf(Array).isRequired,
 }
 
 const mapStateToProps = state => ({

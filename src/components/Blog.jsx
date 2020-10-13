@@ -1,13 +1,26 @@
 import React from 'react'
 import PostsList from './PostsList'
 import AddPostModal from './AddPostModal'
+import styled from "styled-components";
+
+const Wrapper = styled.div`
+  padding: 50px 120px;
+`
+
+const Title = styled.h1`
+  color: turquoise;
+  margin-bottom: 30px;
+`
 
 const Blog = () => (
-  <div>
-    <h1>Blog Posts</h1>
-    <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#addPostModal">Add Post</button>
+  <Wrapper>
+    <Title>
+      Blog Posts
+      <button type="button" className="btn btn-primary float-right" data-toggle="modal"
+              data-target="#addPostModal">Add Post</button>
+    </Title>
     <PostsList />
     <AddPostModal />
-  </div>
+  </Wrapper>
 )
 export default Blog

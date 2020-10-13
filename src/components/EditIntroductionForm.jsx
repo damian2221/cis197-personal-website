@@ -2,13 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { editIntroduction } from '../actions'
+import styled from "styled-components";
+
+const FormGroup = styled.div`
+  margin-bottom: 25px;
+`
 
 const EditIntroductionForm = ({ introduction, dispatchEditIntroduction, setIsEditing }) => {
   let { image, description } = introduction
 
   return (
     <div>
-      <div className="form-group">
+      <FormGroup className="form-group">
         Image
         <input
           onChange={e => {
@@ -18,8 +23,8 @@ const EditIntroductionForm = ({ introduction, dispatchEditIntroduction, setIsEdi
           placeholder="Enter image url"
           defaultValue={image}
         />
-      </div>
-      <div className="form-group">
+      </FormGroup>
+      <FormGroup className="form-group">
         Description
         <input
           onChange={e => {
@@ -29,7 +34,7 @@ const EditIntroductionForm = ({ introduction, dispatchEditIntroduction, setIsEdi
           placeholder="Enter description"
           defaultValue={description}
         />
-      </div>
+      </FormGroup>
       <button
         type="button"
         className="btn btn-success"
@@ -46,6 +51,7 @@ const EditIntroductionForm = ({ introduction, dispatchEditIntroduction, setIsEdi
         type="button"
         className="btn btn-info"
         data-dismiss="modal"
+        style={{ marginLeft: "10px" }}
         onClick={e => {
           e.preventDefault()
           setIsEditing(false)
