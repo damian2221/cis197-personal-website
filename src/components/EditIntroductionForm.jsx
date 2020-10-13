@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import styled from 'styled-components'
 import { editIntroduction } from '../actions'
-import styled from "styled-components";
 
 const FormGroup = styled.div`
   margin-bottom: 25px;
@@ -51,7 +51,7 @@ const EditIntroductionForm = ({ introduction, dispatchEditIntroduction, setIsEdi
         type="button"
         className="btn btn-info"
         data-dismiss="modal"
-        style={{ marginLeft: "10px" }}
+        style={{ marginLeft: '10px' }}
         onClick={e => {
           e.preventDefault()
           setIsEditing(false)

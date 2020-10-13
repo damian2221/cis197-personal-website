@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import Introduction from './Introduction'
 import EditIntroductionForm from './EditIntroductionForm'
-
-import styled from 'styled-components'
 
 const Wrapper = styled.div`
   padding: 50px 120px;
@@ -20,8 +19,15 @@ const Header = () => {
     <Wrapper>
       <Title>
         Hey this is me!
-        { isEditing ? '' : <button type="button" className="btn btn-warning float-right"
-                                   onClick={() => setIsEditing(true)}>Edit</button> }
+        { isEditing ? '' : (
+          <button
+            type="button"
+            className="btn btn-warning float-right"
+            onClick={() => setIsEditing(true)}
+          >
+            Edit
+          </button>
+        ) }
       </Title>
       { isEditing ? <EditIntroductionForm setIsEditing={setIsEditing} /> : <Introduction /> }
     </Wrapper>

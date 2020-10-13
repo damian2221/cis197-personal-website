@@ -1,7 +1,7 @@
 import React from 'react'
+import styled from 'styled-components'
 import PostsList from './PostsList'
 import AddPostModal from './AddPostModal'
-import styled from "styled-components";
 
 const Wrapper = styled.div`
   padding: 50px 120px;
@@ -16,8 +16,14 @@ const Blog = () => (
   <Wrapper>
     <Title>
       Blog Posts
-      <button type="button" className="btn btn-primary float-right" data-toggle="modal"
-              data-target="#addPostModal">Add Post</button>
+      <button
+        type="button"
+        className="btn btn-primary float-right"
+        data-toggle="modal"
+        data-target="#addPostModal"
+      >
+        Add Post
+      </button>
     </Title>
     <PostsList />
     <AddPostModal />
