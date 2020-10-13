@@ -1,0 +1,41 @@
+{
+  "name": "cis197-personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "lint": "./node_modules/.bin/eslint \"src/**/*.js*\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damian2221/cis197-personal-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/damian2221/cis197-personal-website/issues"
+  },
+  "homepage": "https://github.com/damian2221/cis197-personal-website#readme",
+  "devDependencies": {
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4 || ^3 || ^2.3.0 || ^1.7.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "bootstrap": "^4.5.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "jquery": "^3.5.1",
+    "parcel-bundler": "^1.12.4",
+    "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5"
+  }
+}
